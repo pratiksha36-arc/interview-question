@@ -1,0 +1,71 @@
+1.Difference between “ == “ and “ === “ operators.
+Ans. == (Loose Equality): Converts values to the same data type before comparing (type coercion).
+=== (Strict Equality): Compares both value and data type, without converting types.
+
+2.What are the differences between var, let and const?
+Ans. 	var (Function-scoped, Hoisted, Mutable)
+	Scope: Function-scoped (not block-scoped).
+	Hoisting: Hoisted to the top of its scope but initialized as undefined.
+	Re-declaration: Allowed within the same scope.
+	Reassignment: Allowed.
+
+	
+	let (Block-scoped, Hoisted but Uninitialized, Mutable)
+	Scope: Block-scoped ({}).
+	Hoisting: Hoisted but not initialized (Accessing before declaration results in a ReferenceError).
+	Re-declaration: Not allowed in the same scope.
+	Reassignment: Allowed.
+
+	const (Block-scoped, Hoisted but Uninitialized, Immutable)
+	Scope: Block-scoped.
+	Hoisting: Hoisted but not initialized (similar to let).
+	Re-declaration: Not allowed.
+	Reassignment: Not allowed (must be assigned a value at the time of declaration).
+
+
+3.    What is execution context?
+Ans. The Execution Context is an environment where JavaScript code is executed. It defines what variables, functions, and objects are accessible at a particular moment in execution.
+
+
+4.What is creation phase and execution phase.?
+
+5. What is hoisting?
+Ans. Hoisting is a JavaScript mechanism where variable and function declarations are moved ("hoisted") to the top of their scope before execution. This means you can use variables and functions before declaring them in your code.
+
+greet(); 
+function greet() {
+    console.log("Hello, World!");
+}
+  
+6. Difference between undefined vs not defined vs NaN?
+
+Ans.  Undefined (Declared but Not Assigned a Value)
+
+	Happens when a variable is declared but not initialized.
+
+	Not defined (Variable Not Declared)
+	Happens when a variable is not declared at all in the code.
+
+ 	NaN (Not a Number)
+	Occurs when a mathematical operation fails to return a valid number.
+
+7.How many operators do we have in JS ? 
+Ans.  	1. Arithmetic Operators (+, -, *, /, %)
+	2. Assignment Operators (=, +=, -=, *=, /=, %=, **=)
+	3. Comparison Operators (==, ===, !=, !==, >, <, >=, <=)
+	4. Logical Operators (&&, !)
+
+8.  Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript
+Ans. 	Local Scope
+	A variable declared inside a function is local to that function.
+	It cannot be accessed outside the function.
+
+	Block Scope
+	A variable declared with let or const inside {} (curly braces) is restricted to that block.
+	var does not have block scope, it leaks out.
+
+	Function Scope
+	Variables declared with var are function-scoped, meaning they exist only inside the function.
+
+	Scope Chain
+	When a variable is not found in the current scope, JavaScript looks up the outer scopes until it reaches the global scope.
